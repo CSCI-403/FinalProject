@@ -125,7 +125,7 @@ void taskOne( void * parameter )
   portTickType lastTimeRun;
   
   // checks the sensosor evey 1000 ms 
-  const TickType_t xFrequency = 250;
+  const TickType_t xFrequency = 33;
 
  
 // Initialise the lastTimeRun variable with the current time.
@@ -150,8 +150,8 @@ void taskOne( void * parameter )
    Serial.print("Sensor A  ");
    Serial.print(LastPulseTimeA);
    Serial.print('\t');
-   Serial.print((LastPulseTimeA/2) / 29.1,1);
-   Serial.println("cm");
+   Serial.print(((LastPulseTimeA/2)*(.3432)));
+   Serial.println("mm");
      vTaskDelay(1) ;
     }
  
@@ -166,7 +166,7 @@ void taskTwo( void * parameter)
  portTickType lastTimeRun;
   
   // checks the sensosor evey 1000 ms 
-  const TickType_t xFrequency = 500;
+  const TickType_t xFrequency = 70;
 
  
 // Initialise the lastTimeRun variable with the current time.
@@ -191,8 +191,8 @@ void taskTwo( void * parameter)
     Serial.print("Sensor B  ");
     Serial.print(LastPulseTimeB);
     Serial.print('\t');
-    Serial.print((LastPulseTimeB/2) / 29.1,1);
-    Serial.println("cm");
+    Serial.print(((LastPulseTimeB/2)*(.3432)));
+    Serial.println("mm");
     }
     
     Serial.println("Ending task 2");
@@ -209,7 +209,7 @@ void taskThree( void * parameter)
  portTickType lastTimeRun;
   
   // checks the sensosor evey 1000 ms 
-  const TickType_t xFrequency = 250;
+  const TickType_t xFrequency = 99;
 
  
 // Initialise the lastTimeRun variable with the current time.
@@ -234,8 +234,8 @@ void taskThree( void * parameter)
     Serial.print("Sensor C  ");
     Serial.print(LastPulseTimeC);
     Serial.print('\t');
-    Serial.print((LastPulseTimeC/2) / 29.1,1);
-    Serial.println("cm");
+    Serial.print(((LastPulseTimeC/2)*(.3432)));
+    Serial.println("mm");
     }
     
     Serial.println("Ending task 3");
@@ -252,7 +252,7 @@ void taskFour( void * parameter)
  portTickType lastTimeRun;
   
   // checks the sensosor evey 1000 ms 
-  const TickType_t xFrequency = 250;
+  const TickType_t xFrequency = 200;
 
  
 // Initialise the lastTimeRun variable with the current time.
@@ -277,8 +277,8 @@ void taskFour( void * parameter)
     Serial.print("Sensor D  ");
     Serial.print(LastPulseTimeD);
     Serial.print('\t');
-    Serial.print((LastPulseTimeD/2) / 29.1,1);
-    Serial.println("cm");
+    Serial.print(((LastPulseTimeD/2)*(.3432)));
+    Serial.println("mm");
     }
     
     Serial.println("Ending task 4");
